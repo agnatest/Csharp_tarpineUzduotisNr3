@@ -10,7 +10,8 @@ namespace TarpineUzd3
     {
         public string Pavadinimas { get; set; }
         public string Tipas { get; set; }
-        public double Kaina { get;  }
+        public double Kaina { get; }
+
 
         public Siunta(string pavadinimas, string tipas, double kaina)
         {

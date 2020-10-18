@@ -258,9 +258,7 @@ namespace TarpineUzd3
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
             Environment.Exit(0);
-      
         }    
     }
 }

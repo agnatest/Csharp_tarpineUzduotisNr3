@@ -20,7 +20,6 @@ namespace TarpineUzd3
         public Form2()
         {
             InitializeComponent();
-            
         }
 
         public Form2(ListView prekiu_krepselis, string visoForm1)
@@ -83,10 +82,9 @@ namespace TarpineUzd3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             for (int i=0; i<_prekiu_krepselis.Items.Count;i++)
             {
-                if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje paštu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "S"))
+                if ((siuntimoBudas.SelectedItem.ToString() == siuntaS1.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaS1.Tipas))
                 {
                     siuntosKaina = siuntaS1.Kaina;
                     dydis = siuntaS1.Tipas;
@@ -94,7 +92,7 @@ namespace TarpineUzd3
                     siuntuSuma = siuntaS1.Kaina * siuntuKiekis;
                    
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje kurjeriu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "S"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaS2.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaS2.Tipas))
                 {
                     siuntosKaina = siuntaS2.Kaina;
                     dydis = siuntaS2.Tipas;
@@ -102,70 +100,70 @@ namespace TarpineUzd3
                     siuntuSuma = siuntaS2.Kaina * siuntuKiekis;
                     
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje paštomatu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "S"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaS3.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaS3.Tipas))
                 {
                     siuntosKaina = siuntaS3.Kaina;
                     dydis = siuntaS3.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaS3.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas į užsienį paštu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "S"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaS4.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaS4.Tipas))
                 {
                     siuntosKaina = siuntaS4.Kaina;
                     dydis = siuntaS4.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaS4.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje paštu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "M"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaM1.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaM1.Tipas))
                 {
                     siuntosKaina = siuntaM1.Kaina;
                     dydis = siuntaM1.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaM1.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje kurjeriu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "M"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaM2.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaM2.Tipas))
                 {
                     siuntosKaina = siuntaM2.Kaina;
                     dydis = siuntaM2.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaM2.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje paštomatu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "M"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaM3.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaM3.Tipas))
                 {
                     siuntosKaina = siuntaM3.Kaina;
                     dydis = siuntaM3.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaM3.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas į užsienį paštu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "M"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaM4.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaM4.Tipas))
                 {
                     siuntosKaina = siuntaM4.Kaina;
                     dydis = siuntaM4.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaM4.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje paštu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "L"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaL1.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaL1.Tipas))
                 {
                     siuntosKaina = siuntaL1.Kaina;
                     dydis = siuntaL1.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaL1.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje kurjeriu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "L"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaL2.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaL2.Tipas))
                 {
                     siuntosKaina = siuntaL2.Kaina;
                     dydis = siuntaL2.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaL2.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas Lietuvoje paštomatu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "L"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaL3.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaL3.Tipas))
                 {
                     siuntosKaina = siuntaL3.Kaina;
                     dydis = siuntaL3.Tipas;
                     siuntuKiekis = Convert.ToInt32(_prekiu_krepselis.Items[i].SubItems[3].Text);
                     siuntuSuma = siuntaL3.Kaina * siuntuKiekis;
                 }
-                else if ((siuntimoBudas.SelectedItem.ToString() == "Siuntimas į užsienį paštu") && (_prekiu_krepselis.Items[i].SubItems[1].Text == "L"))
+                else if ((siuntimoBudas.SelectedItem.ToString() == siuntaL4.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaL4.Tipas))
                 {
                     siuntosKaina = siuntaL4.Kaina;
                     dydis = siuntaL4.Tipas;
@@ -243,7 +241,6 @@ namespace TarpineUzd3
         private void button3_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
