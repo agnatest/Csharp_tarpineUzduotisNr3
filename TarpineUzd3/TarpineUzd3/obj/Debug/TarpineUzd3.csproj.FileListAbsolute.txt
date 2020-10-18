@@ -1,0 +1,10 @@
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\bin\Debug\TarpineUzd3.exe.config
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\bin\Debug\TarpineUzd3.exe
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\bin\Debug\TarpineUzd3.pdb
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\obj\Debug\TarpineUzd3.csprojAssemblyReference.cache
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\obj\Debug\TarpineUzd3.Form1.resources
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\obj\Debug\TarpineUzd3.Properties.Resources.resources
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\obj\Debug\TarpineUzd3.csproj.GenerateResource.cache
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\obj\Debug\TarpineUzd3.exe
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\obj\Debug\TarpineUzd3.pdb
+C:\Users\Agna\source\repos\CSharp\TarpineUzd3\TarpineUzd3\TarpineUzd3\obj\Debug\TarpineUzd3.Form2.resources
