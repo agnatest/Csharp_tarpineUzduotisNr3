@@ -15,12 +15,7 @@ namespace TarpineUzd3
     {
 
         public ListView _prekiu_krepselis { get; set; }
-        
-
-        public Form2()
-        {
-            InitializeComponent();
-        }
+        private List <ListViewItem> _siuntimoBudasTemp { get; set; }
 
         public Form2(ListView prekiu_krepselis, string visoForm1)
         {
@@ -67,7 +62,6 @@ namespace TarpineUzd3
             prekiu_paslaugu_krepselis.Items.AddRange((
                 from ListViewItem item in _prekiu_krepselis.Items
                 select (ListViewItem)item.Clone()).ToArray());
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -82,6 +76,22 @@ namespace TarpineUzd3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            try
+            {
+                if (_siuntimoBudasTemp.Count != 0)
+                {
+                    foreach (var paslauga in _siuntimoBudasTemp)
+                    {
+                        prekiu_paslaugu_krepselis.Items.Remove(paslauga);
+                    }
+                }
+            }
+            catch { }
+            finally {
+                _siuntimoBudasTemp = new List<ListViewItem>();
+            }
+
             for (int i=0; i<_prekiu_krepselis.Items.Count;i++)
             {
                 if ((siuntimoBudas.SelectedItem.ToString() == siuntaS1.Pavadinimas) && (_prekiu_krepselis.Items[i].SubItems[1].Text == siuntaS1.Tipas))
@@ -191,6 +201,8 @@ namespace TarpineUzd3
                 prekiuSarasas.SubItems.Add(masyvas[4]);
                 prekiu_paslaugu_krepselis.Items.Add(prekiuSarasas);
 
+                _siuntimoBudasTemp.Add(prekiuSarasas);
+
                 siuntosKainuSuma.Text = (Convert.ToDouble(siuntosKainuSuma.Text) + Convert.ToDouble(siuntuSuma)).ToString();
                 visoForm2.Text =(Convert.ToDouble(siuntosKainuSuma.Text) + Convert.ToDouble(prekiuSuma.Text)).ToString();
             }
@@ -219,9 +231,7 @@ namespace TarpineUzd3
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
            
-
         }
-
 
         private void label6_Click(object sender, EventArgs e)
         {
